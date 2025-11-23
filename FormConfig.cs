@@ -1,6 +1,6 @@
-﻿using System;
+﻿// FormConfig.cs
+using System;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace TrackBarLab
 {
@@ -9,66 +9,55 @@ namespace TrackBarLab
         public FormConfig()
         {
             InitializeComponent();
+
+            // Настройки модального окна
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.StartPosition = FormStartPosition.CenterParent;
+            this.ShowInTaskbar = false;
+
+            // Фиксируем размер модального окна
+            this.MinimumSize = this.Size;
+            this.MaximumSize = this.Size;
         }
 
-        // Свойство для Minimum (get/set для двухстороннего обмена)
-        /// <summary>
-        /// Свойство для настройки минимального значения TrackBar
-        /// </summary>
         public int TrackMinimum
         {
-            get { return (int)nudMinimum.Value; }
-            set { nudMinimum.Value = value; }
+            get => (int)nudMinimum.Value;
+            set => nudMinimum.Value = Math.Max(nudMinimum.Minimum, Math.Min(nudMinimum.Maximum, value));
         }
 
-        // Свойство для Maximum (get/set для двухстороннего обмена)
-        /// <summary>
-        /// Свойство для настройки максимального значения TrackBar
-        /// </summary>
         public int TrackMaximum
         {
-            get { return (int)nudMaximum.Value; }
-            set { nudMaximum.Value = value; }
+            get => (int)nudMaximum.Value;
+            set => nudMaximum.Value = Math.Max(nudMaximum.Minimum, Math.Min(nudMaximum.Maximum, value));
         }
 
-        // Свойство для Value (get/set для двухстороннего обмена)
-        /// <summary>
-        /// Свойство для настройки текущего значения TrackBar
-        /// </summary>
         public int TrackValue
         {
-            get { return (int)nudValue.Value; }
-            set { nudValue.Value = value; }
+            get => (int)nudValue.Value;
+            set => nudValue.Value = Math.Max(nudValue.Minimum, Math.Min(nudValue.Maximum, value));
         }
 
-        // Свойство для Orientation (get/set для двухстороннего обмена)
-        /// <summary>
-        /// Свойство для настройки ориентации TrackBar (горизонтальная/вертикальная)
-        /// </summary>
         public Orientation TrackOrientation
         {
-            get { return rbHorizontal.Checked ? Orientation.Horizontal : Orientation.Vertical; }
+            get => rbHorizontal.Checked ? Orientation.Horizontal : Orientation.Vertical;
             set
             {
-                rbHorizontal.Checked = (value == Orientation.Horizontal);
-                rbVertical.Checked = (value == Orientation.Vertical);
+                rbHorizontal.Checked = value == Orientation.Horizontal;
+                rbVertical.Checked = value == Orientation.Vertical;
             }
         }
 
-        // Свойство для TickFrequency (get/set для двухстороннего обмена)
-        /// <summary>
-        /// Свойство для настройки частоты тиков TrackBar
-        /// </summary>
         public int TrackTickFrequency
         {
-            get { return (int)nudTickFrequency.Value; }
-            set { nudTickFrequency.Value = value; }
+            get => (int)nudTickFrequency.Value;
+            set => nudTickFrequency.Value = value;
         }
 
-        // Обработчик события Load формы (опционально, для инициализации)
         private void FormConfig_Load(object sender, EventArgs e)
         {
-            // Здесь можно добавить валидацию, например, чтобы Value было между Min и Max
         }
     }
 }
