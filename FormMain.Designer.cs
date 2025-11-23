@@ -1,4 +1,5 @@
-﻿namespace TrackBarLab
+﻿// FormMain.Designer.cs
+namespace TrackBarLab
 {
     partial class FormMain
     {
@@ -35,16 +36,22 @@
             // 
             // tbMainTrackBar
             // 
-            this.tbMainTrackBar.Location = new System.Drawing.Point(12, 12);
+            this.tbMainTrackBar.LargeChange = 10;
+            this.tbMainTrackBar.Location = new System.Drawing.Point(18, 18);
+            this.tbMainTrackBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbMainTrackBar.Maximum = 100;
             this.tbMainTrackBar.Name = "tbMainTrackBar";
-            this.tbMainTrackBar.Size = new System.Drawing.Size(360, 45); // Начальный размер
+            this.tbMainTrackBar.Size = new System.Drawing.Size(564, 69);
             this.tbMainTrackBar.TabIndex = 0;
+            this.tbMainTrackBar.TickFrequency = 10;
+            this.tbMainTrackBar.Value = 50;
             // 
             // btnOpenConfig
             // 
-            this.btnOpenConfig.Location = new System.Drawing.Point(12, 63);
+            this.btnOpenConfig.Location = new System.Drawing.Point(18, 106);
+            this.btnOpenConfig.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnOpenConfig.Name = "btnOpenConfig";
-            this.btnOpenConfig.Size = new System.Drawing.Size(360, 23);
+            this.btnOpenConfig.Size = new System.Drawing.Size(564, 62);
             this.btnOpenConfig.TabIndex = 1;
             this.btnOpenConfig.Text = "Настройки";
             this.btnOpenConfig.UseVisualStyleBackColor = true;
@@ -52,19 +59,21 @@
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 111);
+            this.ClientSize = new System.Drawing.Size(567, 145);
             this.Controls.Add(this.btnOpenConfig);
             this.Controls.Add(this.tbMainTrackBar);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable; // Можно менять размер
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Главная форма с TrackBar";
-            this.Resize += new System.EventHandler(this.FormMain_Resize);
+            this.Load += new System.EventHandler(this.FormMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tbMainTrackBar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion

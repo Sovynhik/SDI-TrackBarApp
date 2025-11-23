@@ -1,31 +1,19 @@
-﻿namespace TrackBarLab
+﻿// FormConfig.Designer.cs
+namespace TrackBarLab
 {
     partial class FormConfig
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
-            {
                 components.Dispose();
-            }
             base.Dispose(disposing);
         }
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             this.nudMinimum = new System.Windows.Forms.NumericUpDown();
@@ -48,97 +36,61 @@
             this.gbOrientation.SuspendLayout();
             this.SuspendLayout();
             // 
-            // nudMinimum
+            // nudMinimum / label1 / etc. — оставляем как было, только подправим размеры формы
             // 
             this.nudMinimum.Location = new System.Drawing.Point(104, 12);
-            this.nudMinimum.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
+            this.nudMinimum.Maximum = 1000;
             this.nudMinimum.Name = "nudMinimum";
             this.nudMinimum.Size = new System.Drawing.Size(120, 20);
             this.nudMinimum.TabIndex = 0;
-            // 
-            // label1
-            // 
+
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Minimum:";
-            // 
-            // nudMaximum
-            // 
+
             this.nudMaximum.Location = new System.Drawing.Point(104, 38);
-            this.nudMaximum.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
+            this.nudMaximum.Maximum = 1000;
             this.nudMaximum.Name = "nudMaximum";
             this.nudMaximum.Size = new System.Drawing.Size(120, 20);
             this.nudMaximum.TabIndex = 2;
-            // 
-            // label2
-            // 
+
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Maximum:";
-            // 
-            // nudValue
-            // 
+
             this.nudValue.Location = new System.Drawing.Point(104, 64);
-            this.nudValue.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
+            this.nudValue.Maximum = 1000;
             this.nudValue.Name = "nudValue";
             this.nudValue.Size = new System.Drawing.Size(120, 20);
             this.nudValue.TabIndex = 4;
-            // 
-            // label3
-            // 
+
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(12, 66);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "Value:";
-            // 
-            // nudTickFrequency
-            // 
+
             this.nudTickFrequency.Location = new System.Drawing.Point(104, 90);
-            this.nudTickFrequency.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.nudTickFrequency.Minimum = 1;
+            this.nudTickFrequency.Value = 1;
             this.nudTickFrequency.Name = "nudTickFrequency";
             this.nudTickFrequency.Size = new System.Drawing.Size(120, 20);
             this.nudTickFrequency.TabIndex = 6;
-            this.nudTickFrequency.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label4
-            // 
+
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(12, 92);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "TickFrequency:";
-            // 
-            // gbOrientation
-            // 
+
             this.gbOrientation.Controls.Add(this.rbVertical);
             this.gbOrientation.Controls.Add(this.rbHorizontal);
             this.gbOrientation.Location = new System.Drawing.Point(12, 116);
@@ -147,9 +99,7 @@
             this.gbOrientation.TabIndex = 8;
             this.gbOrientation.TabStop = false;
             this.gbOrientation.Text = "Ориентация";
-            // 
-            // rbVertical
-            // 
+
             this.rbVertical.AutoSize = true;
             this.rbVertical.Location = new System.Drawing.Point(6, 42);
             this.rbVertical.Name = "rbVertical";
@@ -157,9 +107,7 @@
             this.rbVertical.TabIndex = 1;
             this.rbVertical.Text = "Вертикальная";
             this.rbVertical.UseVisualStyleBackColor = true;
-            // 
-            // rbHorizontal
-            // 
+
             this.rbHorizontal.AutoSize = true;
             this.rbHorizontal.Checked = true;
             this.rbHorizontal.Location = new System.Drawing.Point(6, 19);
@@ -169,23 +117,19 @@
             this.rbHorizontal.TabStop = true;
             this.rbHorizontal.Text = "Горизонтальная";
             this.rbHorizontal.UseVisualStyleBackColor = true;
-            // 
-            // btnOK
-            // 
+
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnOK.Location = new System.Drawing.Point(68, 186);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.Size = new System.Drawing.Size(75, 30);
             this.btnOK.TabIndex = 9;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
-            // 
-            // btnCancel
-            // 
+
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Location = new System.Drawing.Point(149, 186);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(75, 30);
             this.btnCancel.TabIndex = 10;
             this.btnCancel.Text = "Отмена";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -208,12 +152,18 @@
             this.Controls.Add(this.nudMaximum);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nudMinimum);
+
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "FormConfig";
+            this.MaximizeBox = false;                // НЕТ кнопки Развернуть
+            this.MinimizeBox = false;                // НЕТ кнопки Свернуть
+            this.MinimumSize = this.Size;            // ФИКСИРОВАННЫЙ размер
+            this.MaximumSize = this.Size;            // Полностью запрещаем ресайз
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Name = "FormConfig";
             this.Text = "Настройки TrackBar";
             this.Load += new System.EventHandler(this.FormConfig_Load);
+
             ((System.ComponentModel.ISupportInitialize)(this.nudMinimum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMaximum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudValue)).EndInit();
@@ -222,7 +172,6 @@
             this.gbOrientation.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
